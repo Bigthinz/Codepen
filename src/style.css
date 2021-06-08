@@ -44,4 +44,22 @@ body{
 }
 
 
+.editor-container.collapsed{
+  flex-grow: 0;
+  
+}
+
+
+.editor-container.collapsed .CodeMirror-scroll{
+  position:absolute;
+  overflow: hidden !important;
+}
+
+.expand-collapse-btn{
+  margin-left: .5rem;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
 
