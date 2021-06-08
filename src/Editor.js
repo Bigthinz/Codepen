@@ -1,4 +1,5 @@
 import React from "react";
+
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/material.css'
 import 'codemirror/mode/xml/xml'
@@ -8,10 +9,18 @@ import { Controlled as ControlledEditor } from 'react-codemirror2'
 
 export default function Editor(props) {
 
+
   const {
     language,
-    displayName
+    displayName,
+    value,
+    onChange
+
   } = props
+
+  function handleChange(editor, data, value){
+    onChange(value)
+  }
 
 
   return (
@@ -26,9 +35,10 @@ export default function Editor(props) {
         value={value}
         className='code-mirror-wrapper'
         options={{
-          lineWrapping= true,
-          lint= true,
-          mode=language
+          lineWrapping:true,
+          lint: true,
+          theme: 'material',
+          mode:language
         }}
       />
      </div>
