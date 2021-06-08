@@ -20,6 +20,10 @@ body{
   background-color: hsl(255, 6%, 25%);
 }
 
+.CodeMirror{
+  height:100% !important;
+}
+
 .editor-title{
   display: flex;
   justify-content: space-between;
@@ -30,5 +34,14 @@ body{
    border-top-left-radius:.5rem;
 
 }
+
+.code-mirror-wrapper{
+  flex-grow: 1;
+  border-bottom-right-radius:.5rem;
+   border-bottom-left-radius:.5rem;
+  overflow: hidden;
+
+}
+
 
 
